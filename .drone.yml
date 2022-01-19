@@ -10,6 +10,11 @@ steps:
 - name: clone
   image: bitnami/git
 
+- name: golang
+  image: golang:alpine
+  commands:
+  - go buile -o -v test .
+
 
 - name: greeting
   image: alpine
