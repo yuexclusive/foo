@@ -2,25 +2,9 @@ kind: pipeline
 type: kubernetes
 name: default
 
-clone:
-  disable: true
-
-
 steps:
-- name: clone
-  image: bitnami/git
+- name: greeting
+  image: alpine
   commands:
-  - git clone https://github.com/yuexclusive/foo.git
-
-# - name: build
-#   image: bitnami/golang
-#   commands:
-#   - go build
-
-# - name: greeting
-#   image: alpine
-#   commands:
-#   - pwd
-#   - ls -a
-#   - echo hello
-#   - echo world
+  - echo hello
+  - echo world
