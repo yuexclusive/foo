@@ -9,16 +9,18 @@ clone:
 steps:
 - name: clone
   image: bitnami/git
-
-- name: build
-  image: bitnami/golang
   commands:
-  - go build
+  - git clone https://github.com/yuexclusive/foo.git
 
-- name: greeting
-  image: alpine
-  commands:
-  - pwd
-  - ls -a
-  - echo hello
-  - echo world
+# - name: build
+#   image: bitnami/golang
+#   commands:
+#   - go build
+
+# - name: greeting
+#   image: alpine
+#   commands:
+#   - pwd
+#   - ls -a
+#   - echo hello
+#   - echo world
