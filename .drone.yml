@@ -13,7 +13,7 @@ steps:
 - name: build
   image: bitnami/golang
   commands:
-  - go buile -o -v test .
+  - go build
 
 - name: greeting
   image: alpine
