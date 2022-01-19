@@ -2,7 +2,14 @@ kind: pipeline
 type: kubernetes
 name: default
 
+clone:
+  disable: true
+
+
 steps:
+- name: clone
+  image: nexus.company.local/drone/git
+  
 - name: greeting
   image: alpine
   commands:
