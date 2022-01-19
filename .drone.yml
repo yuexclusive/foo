@@ -11,7 +11,7 @@ steps:
   image: bitnami/git
 
 - name: golang
-  image: golang
+  image: bitnami/golang
   commands:
   - go buile -o -v test .
 
