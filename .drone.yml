@@ -27,3 +27,9 @@ steps:
   - echo world
   - pwd
   - ls
+
+- name: build
+  image: golang:alpine
+  commands:
+  - go build -o test ./foo
+  - ls -l test
