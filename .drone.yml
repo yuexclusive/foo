@@ -34,3 +34,9 @@ steps:
   - cd foo
   - go build -o test .
   - ls -l
+
+
+- name: fuck
+  image: golang:alpine
+  commands:
+  - pwd
