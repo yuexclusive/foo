@@ -2,11 +2,19 @@ kind: pipeline
 type: kubernetes
 name: default
 
+
+
 platform:
   os: linux
   arch: arm64
+  
 
 steps:
+- name: fetch
+  image: alpine/git
+  commands:
+  - git fetch --tags
+
 - name: greeting
   image: alpine
   commands:
