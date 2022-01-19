@@ -25,3 +25,5 @@ steps:
   commands:
   - echo hello
   - echo world
+  - pwd
+  - ls
