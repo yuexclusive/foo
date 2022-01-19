@@ -16,8 +16,9 @@ steps:
 - name: clone
   image: bitnami/git
   commands:
-  - git clone https://github.com/yuexclusive/foo.git
-  - git checkout $DRONE_COMMIT
+  - git config --list
+  # - git clone https://github.com/yuexclusive/foo.git
+  # - git checkout $DRONE_COMMIT
 
 - name: greeting
   image: alpine
