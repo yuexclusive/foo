@@ -7,8 +7,8 @@ clone:
 
 
 steps:
-# - name: clone
-#   image: nexus.company.local/drone/git
+- name: clone
+  image: bitnami/git
 
 - name: greeting
   image: alpine
