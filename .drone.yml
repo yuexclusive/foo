@@ -7,13 +7,17 @@ name: default
 platform:
   os: linux
   arch: arm64
+
+clone:
+  disable: true
   
 
 steps:
-- name: fetch
+- name: clone
   image: alpine/git
   commands:
-  - git fetch --tags
+  - git clone https://github.com/yuexclusive/foo.git/ .
+  - git checkout $DRONE_COMMIT
 
 - name: greeting
   image: alpine
