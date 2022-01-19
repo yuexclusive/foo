@@ -16,10 +16,6 @@ steps:
 - name: clone
   image: bitnami/git
   commands:
-  - sleep 10
-  - echo start
-  - apt update
-  - curl www.baidu.com
   - git clone https://github.com/yuexclusive/foo.git
   # - git checkout $DRONE_COMMIT
 
