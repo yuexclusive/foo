@@ -10,8 +10,11 @@ steps:
 - name: clone
   image: bitnami/git
 
+
 - name: greeting
   image: alpine
   commands:
+  - pwd
+  - ls -a
   - echo hello
   - echo world
