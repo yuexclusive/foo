@@ -16,7 +16,7 @@ steps:
 - name: clone
   image: bitnami/git
   commands:
-  - sleep 0.8
+  - sleep 2
   - git clone https://github.com/yuexclusive/foo.git
   # - git checkout $DRONE_COMMIT
 
