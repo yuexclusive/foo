@@ -24,6 +24,7 @@ steps:
   image: golang:1.18beta1-alpine3.15
   commands:
   - cd foo
+  - go version
   - go build -o test .
 
 - name: publish
