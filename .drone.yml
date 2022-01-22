@@ -31,7 +31,6 @@ steps:
 
 - name: publish
   image: docker:dind
-  privileged: true
   volumes:
   - name: dockersock
     path: /var/run
@@ -40,7 +39,14 @@ steps:
   - cd foo
   - docker build --rm -t yuexclusive/test:latest .
   - docker publish yuexclusive/test:latest
-
+  
+services:
+- name: docker
+  image: docker:dind
+  privileged: true
+  volumes:
+  - name: dockersock
+    path: /var/run
 
 volumes:
 - name: dockersock
