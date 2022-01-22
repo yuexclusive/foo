@@ -20,14 +20,14 @@ steps:
   - git clone https://github.com/yuexclusive/foo.git
   # - git checkout $DRONE_COMMIT
 
-- name: build
-  image: golang:1.18beta1-alpine3.15
-  commands:
-  - apk update 
-  - apk add git
-  - cd foo
-  - go version
-  - go build -o test .
+# - name: build
+#   image: golang:1.18beta1-alpine3.15
+#   commands:
+#   - apk update 
+#   - apk add git
+#   - cd foo
+#   - go version
+#   - go build -o test .
 
 - name: publish
   image: docker:dind
