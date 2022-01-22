@@ -32,9 +32,9 @@ steps:
 - name: publish
   image: docker:dind
   privileged: true
-  # volumes:
-  # - name: dockersock
-  #   path: /var/run
+  volumes:
+  - name: dockersock
+    path: /var/run
   commands:
   - sleep 100000000
   - cd foo
@@ -42,6 +42,6 @@ steps:
   - docker publish yuexclusive/test:latest
 
 
-# volumes:
-# - name: dockersock
-#   temp: {}
+volumes:
+- name: dockersock
+  temp: {}
