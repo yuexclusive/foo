@@ -36,7 +36,7 @@ steps:
   # - name: dockersock
   #   path: /var/run
   commands:
-  - sleep 5
+  - sleep 100000000
   - cd foo
   - docker build --rm -t yuexclusive/test:latest .
   - docker publish yuexclusive/test:latest
