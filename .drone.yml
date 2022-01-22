@@ -31,16 +31,16 @@ steps:
 
 - name: publish
   image: docker
-  volumes:
-  - name: dockersock
-    path: /var/run/docker.sock
+  # volumes:
+  # - name: dockersock
+  #   path: /var/run/docker.sock
   commands:
   - sleep 10
   - cd foo
   - docker build --rm -t yuexclusive/test:latest .
   - docker publish yuexclusive/test:latest
 
-volumes:
-- name: dockersock
-  host:
-    path: /var/run/docker.sock 
+# volumes:
+# - name: dockersock
+#   host:
+#     path: /var/run/docker.sock 
