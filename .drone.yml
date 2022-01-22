@@ -31,6 +31,9 @@ steps:
 
 - name: publish
   image: docker
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
   commands:
   - cd foo
   - docker build --rm -t yuexclusive/test:latest .
