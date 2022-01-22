@@ -21,7 +21,7 @@ steps:
   # - git checkout $DRONE_COMMIT
 
 - name: build
-  image: golang:alpine
+  image: golang:1.18beta1-alpine3.15
   commands:
   - cd foo
   - go build -o test .
