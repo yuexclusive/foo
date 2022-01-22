@@ -20,23 +20,14 @@ steps:
   - git clone https://github.com/yuexclusive/foo.git
   # - git checkout $DRONE_COMMIT
 
-- name: greeting
-  image: alpine
-  commands:
-  - echo hello
-  - echo world
-  - pwd
-  - ls
-
 - name: build
   image: golang:alpine
   commands:
   - cd foo
   - go build -o test .
-  - ls -l
 
-
-- name: fuck
-  image: golang:alpine
+- name: publish
+  image: docker
   commands:
-  - pwd
+  - docker build --rm -t yuexclusive/test:latest .
+  - docker publish yuexclusive/test:latest
