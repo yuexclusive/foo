@@ -48,5 +48,5 @@ steps:
   commands:
   - cd foo
   - docker build --rm -t yuexclusive/test:latest .
-  - docker publish yuexclusive/test:latest
+  - docker push yuexclusive/test:latest
 
