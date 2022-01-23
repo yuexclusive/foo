@@ -50,4 +50,5 @@ steps:
   - docker build --rm -t yuexclusive/test:latest .
   - docker login -u yuexclusive -p 1552b5a8-7ce1-4a69-b3d3-dbf542d8a81c
   - docker push yuexclusive/test:latest
+  
 
